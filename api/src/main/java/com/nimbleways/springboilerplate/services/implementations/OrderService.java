@@ -34,7 +34,7 @@ public class OrderService implements IOrderService {
                         .findFirst()
                         .orElseThrow(() -> new IllegalArgumentException("Unsupported product type: " + product.getType()));
 
-                strategy.process(Order, product);
+                strategy.process(order, product);
             }
         }
 
